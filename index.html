@@ -1,0 +1,154 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fútbol - Programa de desarrollo futbolístico</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #14243a;
+    background: #eaf3ff;
+  }
+  .intro { max-width: 1100px; margin: 0 auto 22px; text-align: center; }
+  .intro p { margin: 6px 0; color: #42536a; }
+  .sheet {
+    max-width: 1100px;
+    margin: 0 auto 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: white;
+    border: 2px solid #183b67;
+    box-shadow: 0 8px 25px #183b6720;
+  }
+  .panel {
+    min-height: 570px;
+    padding: 28px 23px;
+    border-right: 1px dashed #7892b1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #fafdff, #dcecff);
+  }
+  .panel:last-child { border-right: 0; }
+  .panel h1, .panel h2 {
+    color: #123d70;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 22px;
+  }
+  .panel h1 { font-size: 34px; letter-spacing: 2px; }
+  .panel h2 { font-size: 23px; }
+  .panel p, .panel li { line-height: 1.55; font-size: 16px; }
+  .panel ul { padding-left: 20px; }
+  .emoji { text-align: center; font-size: 42px; margin: 8px 0 18px; }
+  .tagline { text-align: center; font-size: 21px !important; color: #49627e; }
+  .highlight {
+    background: #ffffffc9;
+    border-left: 5px solid #2d6eae;
+    padding: 13px 15px;
+    border-radius: 5px;
+  }
+  .contact p { overflow-wrap: anywhere; margin: 12px 0; }
+  .cta {
+    background: #164b80;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .small { font-size: 14px !important; }
+  @media (max-width: 760px) {
+    body { padding: 12px; }
+    .sheet { grid-template-columns: 1fr; }
+    .panel { min-height: auto; border-right: 0; border-bottom: 1px dashed #7892b1; }
+    .panel:last-child { border-bottom: 0; }
+  }
+  @media print {
+    @page { size: A4 landscape; margin: 8mm; }
+    body { padding: 0; background: white; }
+    .intro { display: none; }
+    .sheet {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      box-shadow: none;
+      break-after: page;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .sheet:last-of-type { break-after: auto; }
+    .panel { min-height: 180mm; padding: 15mm 9mm; }
+    .panel p, .panel li { font-size: 12pt; }
+  }
+</style>
+</head>
+<body>
+  <header class="intro">
+    <h1>Folleto de fútbol</h1>
+    <p>Programa de desarrollo futbolístico · Diseño adaptable y listo para imprimir.</p>
+  </header>
+
+  <main>
+    <section class="sheet" aria-label="Interior del tríptico">
+      <article class="panel">
+        <div class="emoji">🏆</div>
+        <h1>Fútbol</h1>
+        <p class="tagline">¡¡¡Vivir la pasión del fútbol!!!</p>
+        <div class="emoji">⚽</div>
+        <p class="highlight">Un espacio para aprender, entrenar, compartir y disfrutar del deporte.</p>
+      </article>
+
+      <article class="panel">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos un programa de desarrollo futbolístico enfocado en potenciar el talento, la disciplina y el trabajo en equipo. No solo enseñamos técnica y táctica, sino también valores fundamentales como el respeto, el compañerismo y la perseverancia.</p>
+        <div class="emoji">🤝</div>
+      </article>
+
+      <article class="panel">
+        <h2>¿Qué ofrecemos?</h2>
+        <ul>
+          <li><strong>Entrenamiento técnico y táctico:</strong> control de balón, pases, regates, defensa y definición.</li>
+          <li><strong>Preparación física:</strong> agilidad, velocidad, resistencia y prevención de lesiones.</li>
+          <li><strong>Formación en valores:</strong> liderazgo, juego limpio y resiliencia.</li>
+          <li><strong>Competencia y diversión:</strong> partidos de práctica, torneos internos y participación en ligas locales.</li>
+          <li><strong>Entrenadores calificados:</strong> profesionales con experiencia en la formación deportiva.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="sheet" aria-label="Exterior del tríptico">
+      <article class="panel">
+        <div class="emoji">⚽</div>
+        <h2>Requisitos de inscripción</h2>
+        <p><strong>¿Qué necesitás para inscribirte?</strong></p>
+        <ul>
+          <li>Fotocopia del documento de identidad.</li>
+          <li>Certificado médico de aptitud física.</li>
+          <li>Completar la hoja de inscripción.</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <div class="emoji">🏟️</div>
+        <h2>¡Sumate al equipo!</h2>
+        <p class="tagline">Entrená, aprendé y disfrutá del fútbol con nosotros.</p>
+        <p class="highlight">Desarrollá tus habilidades dentro y fuera de la cancha.</p>
+        <div class="emoji">⚽ 🏆 ⚽</div>
+      </article>
+
+      <article class="panel contact">
+        <h2>Inscripciones y contacto</h2>
+        <p class="cta">¡Inscribite hoy y obtené tu primera clase de prueba gratis! (Un descuento por inscripción temprana).</p>
+        <p>📍 <strong>Ubicación:</strong> Complejo Deportivo Raúl</p>
+        <p>📱 <strong>Teléfono / WhatsApp:</strong> 094 560980</p>
+        <p>📸 <strong>Redes sociales:</strong> Instagram / Facebook: @TU PROGRAMA DE FUTBOL</p>
+        <p>✉️ <strong>Correo electrónico:</strong> LAODJBHGIFHIFGR@GMAIL.COM</p>
+        <p class="small">Revisá los datos de contacto antes de publicar el folleto.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
